@@ -1,4 +1,2 @@
-chatbox
-=======
-
-A Symfony project created on August 28, 2016, 7:53 pm.
+# symfos
+Blank symfony 3 project with already integrated FOSUserBundle
