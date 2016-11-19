@@ -6,10 +6,12 @@ read -n 1 x
 if [ "$x" = "y" ] || [ "$x" == "Y" ]; then  
 	printf '\rpreparational operations in progress \n\rplease wait...\n\r'
 	sudo cp /vagrant/vmfiles/default /etc/nginx/sites-available/default
+	sudo cp /vagrant/vmfiles/www.conf /etc/php/7.0/fpm/pool.d/www.conf
+	sudo chmod -R 777 /vagrant/var
 	sudo service nginx restart
 	sudo service php7.0-fpm restart
 	sudo npm install gulp
-		printf '\e[0;32m%s\e[0m\n' 'Done'
+	printf '\e[0;32m%s\e[0m\n' 'Done'
 else
     printf '\rBoot your VM and come again!\n\n'
 fi
